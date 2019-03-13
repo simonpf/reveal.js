@@ -14,6 +14,7 @@ body {
 	font-size: $mainFontSize;
 	font-weight: normal;
 	color: $mainColor;
+  text-align: left;
 }
 
 ::selection {
@@ -45,6 +46,10 @@ body {
     height: 100%;
 }
 
+.reveal .slides {
+    text-align: left;
+}
+
 /***************/
 /* Title Slide */
 /***************/
@@ -68,9 +73,13 @@ body {
 
 .institution {
     position: absolute;
-    left: 50%;
-    width: 50%;
-    bottom: 10%;
+    right: 10%;
+    bottom: 17.75%;
+}
+
+#div {
+    left: 0;
+    text-align: left;
 }
 
 /*****************/
@@ -115,6 +124,16 @@ body {
     background: $backgroundColorInverted;
 }
 
+.reveal .title h1,
+.reveal .title h2,
+.reveal .title h3,
+.reveal .title h4,
+.reveal .title h5,
+.reveal .title h6 {
+	  margin: 0;
+	  text-transform: titleHeadingTextTransform;
+}
+
 /*********************************************
  * HEADERS
  *********************************************/
@@ -135,6 +154,7 @@ body {
 
 	text-transform: $headingTextTransform;
 	text-shadow: $headingTextShadow;
+  text-align: left;
 
 	word-wrap: break-word;
 }
@@ -187,14 +207,17 @@ body {
 .reveal ol,
 .reveal dl,
 .reveal ul {
-	display: inline-block;
-
-	text-align: left;
-	margin: 0 0 0 1em;
+    display: inline-block;
+    text-align: left;
+    margin: 0 0 0 1em;
 }
 
 .reveal ol {
 	list-style-type: decimal;
+}
+
+.reveal il {
+	  margin-top: 0.1em;
 }
 
 .reveal ul {
@@ -202,11 +225,11 @@ body {
 }
 
 .reveal ul ul {
-	list-style-type: square;
+	list-style-type: disc;
 }
 
 .reveal ul ul ul {
-	list-style-type: circle;
+	list-style-type: disc;
 }
 
 .reveal ul ul,
@@ -351,6 +374,22 @@ body {
 	background: darken( $linkColor, 15% );
 }
 
+#left {
+    left:-8.33%;
+    text-align: left;
+    float: left;
+    width:50%;
+    z-index:-10;
+}
+
+#right {
+    left:31.25%;
+    top: 75px;
+    float: right;
+    text-align: right;
+    z-index:-10;
+    width:50%;
+}
 
 /*********************************************
  * IMAGES
@@ -359,9 +398,6 @@ body {
 .reveal section img {
 	margin: 15px 0px;
 	background: rgba(255,255,255,0.12);
-	border: 4px solid $mainColor;
-
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
 
 	.reveal section img.plain {
